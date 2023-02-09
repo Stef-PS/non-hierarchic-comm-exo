@@ -12,14 +12,76 @@ body {
 body > main {
   width: 100%;
   max-width: 40rem;
-  margin: 1rem auto;
-  padding: 1rem;
+  margin: 0 auto;
   background-color: white;
+}
+
+body > main > h1 {
+  background-color: darkcyan;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
 .cart {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 2rem;
+  padding: 2rem 1rem 1rem;
+  overflow-x: hidden;
+  width:100%;
+}
+
+.cart > footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid darkgrey;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cart > ul {
+  width: 100%;
+  list-style: none;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid darkgrey;
+}
+
+.cart > ul li {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr max-content 4.5rem min-content 4rem;
+  column-gap: 0.5rem;
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+}
+
+.cart > ul li span:last-child {
+  text-align: right;
+  font-weight: bold;
+}
+
+.cart .trash {
+  cursor: pointer;
+}
+
+quantity-stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4rem;
+  border: 1px solid darkgrey;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+}
+
+quantity-stepper button {
+  width: 1.5rem;
+  height: 100%;
+  border: none;
+  font-weight: bold;
 }
